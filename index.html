@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fontawesome kit  -->
+
+    <script src="https://kit.fontawesome.com/65b6ddebc4.js" crossorigin="anonymous"></script>
+
+    <!-- tailwindcss and daisyUI link =============================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-title-text': '#131318',
+                        'primary-sub-title-text': '#13131899',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #buyTicket {
+            background: #ddd;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }.seat{
+            background-color: #ddd;
+            padding:10px 0px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .seat-row{
+            font-size: 16px;
+            padding: 5px;
+            margin-top: 34px;
+        }
+        .seat-row:first-child{
+            margin-top: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="w-[1170px] mx-auto">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <a class=" text-xl">Safe-Tripe</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn border-[#1DD100] text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- bg-[url('/img/hero-pattern.svg') -->
+    <main>
+
+        <!-- hero section  -->
+
+        <div class="hero-wrapper w-[1170px]  mx-auto">
+            <div class=" relative">
+                <div class="hero rounded-2xl bg-cover" style="background-image: url(images/banner.png);">
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="text-center py-[150px]">
+                            <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with </h1>
+                            <h1 class="mb-5 text-5xl font-bold text-[#1DD100]">Safe-Tripe</h1>
+                            <p class="mb-5 text-center max-w-md">Yes, you can run unit tests and view the results
+                                directly within the app. The integrated testing features allow for a streamlined .</p>
+                            <button class="btn border-none bg-[#1DD100]"><a href="#buyTicket">Buy Tickets</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex flex-row justify-center gap-10 absolute top-[90%] left-[10%] right-[10%]">
+                        <div
+                            class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                            <div>
+                                <img src="images/people.png" alt="">
+                            </div>
+                            <div class="ml-1">
+                                <p class="text-3xl font-bold">500K+</p>
+                                <p>Registered users</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                            <div>
+                                <img src="images/ticket-cupon.png" alt="">
+                            </div>
+                            <div class="ml-1">
+                                <p class="text-3xl font-bold">1.7 lacks</p>
+                                <p>Tickets sold</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                            <div>
+                                <img src="images/people.png" alt="">
+                            </div>
+                            <div class="ml-1">
+                                <p class="text-3xl font-bold">80K+</p>
+                                <p>Rental partners</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- offer section  -->
+            <div class="my-32">
+                <h2 class="text-3xl text-center">Best offers for you</h2>
+                <div class="flex flex-row justify-center gap-10 py-20">
+                    <div
+                        class="flex flex-row border-blue rounded-2xl inline-block bg-[#e7f33f] gap-10 justify-center items-center p-10">
+                        <div>
+                            <h3 class="text-3xl font-bold">15% OFF</h3>
+                            <p class="font-semibold">on your next purchase</p>
+                            <span> use by January 2024</span>
+                        </div>
+                        <div class="ml-1">
+                            <h3 class="text-xl font-bold">NEW15</h3>
+                            <p>Coupon Code</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex flex-row border-blue rounded-2xl  inline-block bg-[#e29219] gap-10 justify-center items-center p-10">
+                        <div>
+                            <h3 class="text-3xl font-bold">15% OFF</h3>
+                            <p class="font-semibold">on your next purchase</p>
+                            <span> use by January 2024</span>
+                        </div>
+                        <div class="ml-1">
+                            <h3 class="text-xl font-bold">NEW15</h3>
+                            <p>Coupon Code</p>
+                        </div>
+                    </div>
+                
+
+                </div>
+                <p class="text-center"><a href="#" class="text-center text-[#1DD100] border-2 py-2 px-5 rounded-md">See
+                    All Offer</a> </p>
+
+               
+                    
+                </div>
+                
+            </div>
+
+            <!-- ticket book -->
+            <div id="buyTicket" class="w-[100%] rounded-t-3xl border-t-4 border-[#1DD100]">
+                <div class="ticket-wrapper pt-[100px]">
+                    <div class="title text-center w-[60%] mx-auto">
+                        <h1 class="text-5xl font-bold">Safe-tripe paribahon</h1>
+                        <p class="py-6 mb-10 w-[60%] mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated
+                            testing features allow for a streamlined</p>
+                    </div>
+                </div>
+
+                <div class="w-[1170px] mx-auto bg-[#fff] rounded-lg">
+                    <div id="ticket-header">
+                        <div class="flex flex-row  items-center p-10">
+                            <div class="w-[80%]">
+                                <div>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex flex-row items-center mb-3">
+                                            <div>
+                                                <img src="images/bus-logo.png" alt="">
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-2xl font-bold">Greenline Paribahan</p>
+                                                <span>Coach-009-WEB ! AC_Business</span>
+                                            </div>
+                                        </div>
+                                        <div >
+                                            <a href="#" class="bg-[#d6ecd3] text-[#1DD100] p-3 rounded-lg">
+                                                <img src="images/seat-green.png" alt="" class="inline-block">
+                                            <span>40 seats left</span>
+                                            </a>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <!-- bottom single element  -->
+                                    <div class="bg-[#acabab]  rounded-lg">
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p>Route</p> 
+                                            </div>
+                                            <div> 
+                                                <p>Dhaka-Gopalganj</p>
+                                            </div>
+                                        </div>
+
+                                        <hr style="border-top: 3px dashed #bbb">
+
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p>Departure time</p> 
+                                            </div>
+                                            <div> 
+                                                <p>6.00 am</p>
+                                            </div>
+                                        </div>
+
+                                        <hr style="border-top: 3px dashed #bbb">
+
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Boarding pint: Gulistan fulbaria</p> 
+                                            </div>
+                                            <div> 
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Dropping point: BSMRSTU</p>
+                                            </div>
+                                            <div> 
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Estimated time: 9.00 am</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                               
+                                
+
+                               
+                            </div>
+                            <div class="mx-auto">
+                                <img src="images/fare.png" alt="">
+                                <h3>550 taka</h3>
+                                <p>per seat</p>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                    <!-- select your sit  -->
+                    <div class="w-[66%] inline-block border-r-2 p-10">
+                        <h2 class="text-xl font-bold py-2">Select Your Seat</h2>
+                        <hr style="border-top: 1px dashed #bbb">
+                        <div class="flex flex-row justify-between py-2">
+                            <div>
+                                <img src="images/seat-green.png" alt="" class="inline-block">
+                                            <span>40 seats left</span>
+                            </div>
+                            <div>
+                                <img src="images/seat-green-filled.png" alt="" class="inline-block">
+                                            <span>40 seats left</span>
+                            </div>
+                        </div>
+                        <hr style="border-top: 1px dashed #bbb">
+
+                        <div class="flex flex-row justify-end">
+                            <div class="bg-[#ddd] rounded-lg p-3 my-3"><i class="fa-solid fa-dharmachakra text-2xl"></i></div>
+                        </div>
+                        <!-- all bus seat  -->
+                        <div class="flex flex-row">
+                            <div class="inline-block w-[10%]">
+                                <p class="seat-row">a</p>
+                                <p class="seat-row">b</p>
+                                <p class="seat-row">c</p>
+                                <p class="seat-row">d</p>
+                                <p class="seat-row">e</p>
+                                <p class="seat-row">f</p>
+                                <p class="seat-row">g</p>
+                                <p class="seat-row">h</p>
+                                <p class="seat-row">i</p>
+                                <p class="seat-row">j</p>
+
+                            </div>
+                            <div class="inline-block w-[90%]">
+                                <div class="grid  grid-cols-4 grid-rows-10 gap-6">
+                                    <p id="A1" class="seat">A1</p>
+                                    <p id="A1" class="seat">A2</p>
+                                    <p id="A1" class="seat">A3</p>
+                                    <p id="A1" class="seat">A4</p>
+                                    <p id="A1" class="seat">B1</p>
+                                    <p id="A1" class="seat">B2</p>
+                                    <p id="A1" class="seat">B3</p>
+                                    <p id="A1" class="seat">B4</p>
+                                    <p id="A1" class="seat">C1</p>
+                                    <p id="A1" class="seat">C2</p>
+                                    <p id="A1" class="seat">C3</p>
+                                    <p id="A1" class="seat">C4</p>
+                                    <p id="A1" class="seat">D1</p>
+                                    <p id="A1" class="seat">D2</p>
+                                    <p id="A1" class="seat">D3</p>
+                                    <p id="A1" class="seat">D4</p>
+                                    <p id="A1" class="seat">E1</p>
+                                    <p id="A1" class="seat">E2</p>
+                                    <p id="A1" class="seat">E3</p>
+                                    <p id="A1" class="seat">E4</p>
+                                    <p id="A1" class="seat">F1</p>
+                                    <p id="A1" class="seat">F2</p>
+                                    <p id="A1" class="seat">F3</p>
+                                    <p id="A1" class="seat">F4</p>
+                                    <p id="A1" class="seat">G1</p>
+                                    <p id="A1" class="seat">G2</p>
+                                    <p id="A1" class="seat">G3</p>
+                                    <p id="A1" class="seat">G4</p>
+                                    <p id="A1" class="seat">H1</p>
+                                    <p id="A1" class="seat">H2</p>
+                                    <p id="A1" class="seat">H3</p>
+                                    <p id="A1" class="seat">H4</p>
+                                    <p id="A1" class="seat">I1</p>
+                                    <p id="A1" class="seat">I2</p>
+                                    <p id="A1" class="seat">I3</p>
+                                    <p id="A1" class="seat">I4</p>
+                                    <p id="A1" class="seat">J1</p>
+                                    <p id="A1" class="seat">J2</p>
+                                    <p id="A1" class="seat">J3</p>
+                                    <p id="A1" class="seat">J4</p>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[33%] inline-block">
+                        <h2 class="text-xl font-bold py-2">Select Your Seat</h2>
+                        <hr style="border-top: 1px dashed #bbb">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- buyTicket -->
+    </main>
+</body>
+
+</html>
